@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+body{
+    overflow: hidden;
+}
+.bx {
+    height: 500px;
+    padding: 0;
+    position: relative;
+}
+.hello{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
+.blue {
+    clip-path: polygon(60% 0%, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.blue h3,
+.blue h4 {
+    color: #ddd;
+    padding: 35px;
+    padding-top: 150px;
+    padding-left: 326px;
+}
+
+.icon {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+#right {
+    position: absolute;
+    bottom: 30%;
+    right: 20%;
+}
+
+@media(min-width:576px), (max-width:767px) {
+
+    .blue h3,
+    .blue h4 {
+        color: #a3a0a0;
+        padding: 35px;
+        padding-top: 126px;
+        padding-left: 247px;
+    }
+}
+
+@media(min-width: 768px) {
+
+    .blue h3,
+    .blue h4 {
+        color: #a3a0a0;
+        padding: 35px;
+        padding-top: 150px;
+        padding-left: 326px;
+    }
+}
+
+@media(min-width:320px) {
+
+    .blue h3,
+    .blue h4 {
+        color: #a3a0a0;
+        padding: 35px;
+        padding-top: 150px;
+        padding-left: 326px;
+    }
+}
+
+.simsu {
+    position: absolute;
+    bottom: 2%;
+    left: 3%;
+    height: 330px;
+    width: 235px;
+    z-index: 1;
+}
+
+.cimsu {
+    position: absolute;
+    bottom: 2%;
+    left: 3%;
+    height: 370px;
+    width: 300px;
+    z-index: 1;
+}
+
+.back {
+    height: 100%;
+    width: 100%;
+    /* background-image: url(../Images/back2.jpg); */
+    background-color: black;
+    background-size: cover;
+    color: white;
+}
+
+
+.Work {
+    /* background-color: lightgray;
+    color: black; */
+    background: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white background */
+    backdrop-filter: blur(10px);
+    /* Apply blur effect */
+    border-radius: 10px;
+    /* Optional: for rounded corners */
+    padding: 20px;
+    /* Optional: spacing inside the div */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: add a subtle shadow */
+
+
+}
+
+.navbar,.myCard {
+    /* background: rgba(255, 255, 255, 0.1); */
+    background-color: black;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid white; */
+}
+
+.bg-kala{
+    background-color: black;
+}
+
+/* index.css */
+/* body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: white;
+  } */
+  
+  /* .app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(170, 0, 0, 0.85); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    z-index: 1000;
+  }
+  
+  .popup {
+    background: #1f1f1f;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    animation: pop-in 0.5s ease-out;
+  }
+  
+  .popup h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .popup p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .button-group button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .yes-btn {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .no-btn {
+    background: #f44336;
+    color: white;
+  }
+  
+  .button-group button:hover {
+    transform: scale(1.05);
+  }
+  
+  .not-eligible {
+    color: #ff5252;
+    font-weight: bold;
+    margin-top: 15px;
+    animation: shake 0.3s ease-in-out infinite;
+  }
+  
+  .welcome {
+    text-align: center;
+    animation: fade-in 0.6s ease-in forwards;
+  }
+  
+  @keyframes pop-in {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+
+  .nav-item{
+
+      text-align: left;
+     
+    }
+    
+
+ .mycartbtn{
+  margin-left: 40px;
+ }
+ .col-sm-5{
+  font-size: 6.5rem;
+  /* word-spacing: -30px; */
+ }
+
+ .us{
+  text-align: center;
+ }
+
+ .hlooo{
+  
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    text-align: center;
+    font-weight: 10;
+    font-style: normal;
+ 
+ }
