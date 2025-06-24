@@ -15,7 +15,7 @@ export default function Home() {
       <Pop/>
       <Slider />
       <Category />
-      <Quotes />
+{/*       <Quotes /> */}
       <HowItWorks />
       <Brands />
       <BarSchool />
