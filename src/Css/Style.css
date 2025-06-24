@@ -38,11 +38,11 @@ body{
     font-size: 25px;
 }
 
-#right {
+/* #right {
     position: absolute;
     bottom: 30%;
     right: 20%;
-}
+} */
 
 @media(min-width:576px), (max-width:767px) {
 
