@@ -2,7 +2,7 @@ import React from 'react'
 import Aboutp from '../Images/about2.avif'
 import pic2 from '../Images/about3.avif'
 import pic3 from '../Images/about4.avif'
-import Cardi from './MyCard'
+// import Cardi from './MyCard'
 import MyCard from './MyCard'
 
 export default function About() {
