@@ -1,9 +1,9 @@
 import React from 'react'
 // import Logo from '../Images/logo.png'
 import Thugs from '../Images/logo2.png'
-import { Outlet,Link } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 import Footer from './Footer'
-export default function Navigation({size}) {
+export default function Navigation({ size }) {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
@@ -31,16 +31,16 @@ export default function Navigation({size}) {
                   <li><Link class="dropdown-item" to="/domestic">Domestic</Link></li>
                 </ul>
               </li>
-            <li class="nav-item mx-5">
+              <li class="nav-item mx-5">
                 <li><Link rel="stylesheet" to="/LoginPage" class="nav-link text-light">LoginPage</Link></li>
               </li>
+              <Link to="/cart"><button className='btn btn-warning mycartbtn'>Cart <span className='badge bg-danger'>{size}</span></button></Link>
             </ul>
           </div>
-          <Link to="/cart"><button className='btn btn-warning mycartbtn'>Cart <span className='badge bg-danger'>{size}</span></button></Link>
         </div>
       </nav>
       <Outlet />
-      <Footer/>
+      <Footer />
     </>
   )
 }
