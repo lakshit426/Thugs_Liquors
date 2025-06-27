@@ -8,7 +8,7 @@ import sj from '../Images/sss.avif'
 const MyCard = () => {
     return (
         <>
-        <div className="row py-3"></div>
+        <div className="row my-3"></div>
         <h1 className='hlooo'>DEVELOPERS</h1>
         <div className="container">
             <div className="row mt-5">
