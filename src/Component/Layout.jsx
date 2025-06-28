@@ -16,6 +16,7 @@ import LoginPage from './LoginPage'
 import About from './About'
 import MyCard from './MyCard'
 import Order from './Order'
+import Signup from './Signup'
 export default function Layout() {
 
   const [MyCart, setCart] = useState([]);
@@ -83,6 +84,7 @@ export default function Layout() {
           <Route path='/About' element={<About />} />
           <Route path='/MyCard' element={<MyCard />} />
           <Route path='/order' element={<Order />} />
+          <Route path='/Signup' element={<Signup/>}/>
         </Route>
       </Routes>
     </BrowserRouter>

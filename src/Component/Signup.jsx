@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Outlet, Link } from 'react-router-dom'
 
-const LoginPage = () => {
+const Signup = () => {
   return (
     <StyledWrapper>
       <div className="row py-5"></div>
@@ -13,17 +12,24 @@ const LoginPage = () => {
         <div className="col-sm-4">
           <div className="container ms-5">
             <div className="card">
-              <a className="login">Log in</a>
+              <a className="login">Sign Up</a>
               <div className="inputBox">
                 <input type="text" required="required" />
                 <span className="user">Username</span>
               </div>
               <div className="inputBox">
+                <input type="text" required="required" />
+                <span className="email">Email</span>
+              </div>
+              <div className="inputBox">
                 <input type="password" required="required" />
-                <span>Password</span>
+                <span> Password</span>
+              </div>
+              <div className="inputBox">
+                <input type="password" required="required" />
+                <span> Confirm Password</span>
               </div>
               <button className="enter">Enter</button>
-              <button className='enter'><Link className='text-decoration-none text-white' to="/Signup" >Sign Up</Link></button>
             </div>
           </div>
         </div>
@@ -128,6 +134,4 @@ const StyledWrapper = styled.div`
     color: white;
   }`;
 
-
-  
-export default LoginPage;
+export default Signup;
