@@ -1,44 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Outlet, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   return (
     <StyledWrapper>
-      <div className="row py-5"></div>
-      <div className="row py-3"></div>
-      <div className="row py-3"></div>
-      <div className='row  d-flex align-item-center justify-content-center'>
-        <div className="col-sm-4"></div>
-        <div className="col-sm-4">
-          <div className="container ms-5">
+      <div className="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+        <div className="row w-100 justify-content-center">
+          <div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
             <div className="card">
               <a className="login">Log in</a>
               <div className="inputBox">
-                <input type="text" required="required" />
+                <input type="text" required />
                 <span className="user">Username</span>
               </div>
               <div className="inputBox">
-                <input type="password" required="required" />
+                <input type="password" required />
                 <span>Password</span>
               </div>
               <button className="enter">Enter</button>
-              <button className='enter'><Link className='text-decoration-none text-white' to="/Signup" >Sign Up</Link></button>
+              <button className="enter">
+                <Link className="text-decoration-none text-white" to="/Signup">Sign Up</Link>
+              </button>
             </div>
           </div>
         </div>
-        <div className="col-sm-4"></div>
       </div>
     </StyledWrapper>
   );
-}
+};
 
 const StyledWrapper = styled.div`
-.login {
+  .login {
     color: #000;
     text-transform: uppercase;
     letter-spacing: 2px;
-    display: block;
     font-weight: bold;
     font-size: x-large;
   }
@@ -47,19 +43,21 @@ const StyledWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 350px;
-    width: 300px;
+    padding: 2rem 1rem;
     flex-direction: column;
-    gap: 35px;
+    gap: 30px;
     background: #e3e3e3;
-    box-shadow: 16px 16px 32px #c8c8c8,
-          -16px -16px 32px #fefefe;
+    box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
     border-radius: 8px;
+    width: 100%;
+    max-width: 320px;
+    margin-top:100px;
   }
 
   .inputBox {
     position: relative;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
   }
 
   .inputBox input {
@@ -92,8 +90,8 @@ const StyledWrapper = styled.div`
     border-radius: 8px;
   }
 
-  .inputBox input:valid~span,
-  .inputBox input:focus~span {
+  .inputBox input:valid ~ span,
+  .inputBox input:focus ~ span {
     transform: translateX(113px) translateY(-15px);
     font-size: 0.8em;
     padding: 5px 10px;
@@ -124,10 +122,24 @@ const StyledWrapper = styled.div`
   }
 
   .enter:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: #000;
     color: white;
-  }`;
+  }
 
+  @media (max-width: 576px) {
+    .login {
+      font-size: large;
+    }
 
-  
+    .card {
+      max-width: 90%;
+      gap: 25px;
+    }
+
+    .inputBox input {
+      font-size: 0.9em;
+    }
+  }
+`;
+
 export default LoginPage;
